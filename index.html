@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanesa Parcellier Real Estates</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="img/logo.jpg" alt="Logo" class="logo">
+        </div>
+        <h1><Br>Vanesa Parcellier</Br>Real Estates</h1>
+        <Br></Br>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#propiedades">Propiedades</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="cuerpo">
+            <section id="inicio">
+                <h2>Encuentra tu hogar ideal</h2>
+                <p>Ofrecemos las mejores propiedades para ti y tu familia.</p>
+            </section>
+            <section id="nosotros">
+                <h2>Sobre Nosotros</h2>
+                <p>Somos una empresa dedicada a ofrecer servicios inmobiliarios de calidad, ayudando a nuestros clientes a encontrar la propiedad perfecta.</p>
+                
+                <h3>Misión</h3>
+                <p>Nuestra misión es proporcionar soluciones inmobiliarias excepcionales que superen las expectativas de nuestros clientes. Nos comprometemos a ofrecer asesoramiento experto, un servicio personalizado y un profundo conocimiento del mercado para ayudar a cada cliente a encontrar su hogar ideal o lograr sus objetivos inmobiliarios con confianza y satisfacción.</p>
+                
+                <h3>Visión</h3>
+                <p>Nuestra visión es ser reconocidos como líderes en el sector inmobiliario, destacándonos por nuestra integridad, profesionalismo y compromiso con la excelencia. Aspiramos a transformar la experiencia inmobiliaria al ofrecer un servicio innovador y eficiente, estableciendo relaciones duraderas con nuestros clientes y contribuyendo positivamente a las comunidades en las que operamos.</p>
+                
+                <h3>Valores</h3>
+                <ul>
+                    <li><strong>Integridad:</strong> Actuamos con honestidad y transparencia en todas nuestras interacciones, garantizando la confianza y el respeto de nuestros clientes y socios.</li>
+                    <li><strong>Excelencia:</strong> Buscamos constantemente la mejora continua en nuestros servicios, asegurando que cada cliente reciba la más alta calidad en cada etapa del proceso inmobiliario.</li>
+                    <li><strong>Compromiso:</strong> Nos dedicamos a entender y satisfacer las necesidades de nuestros clientes, brindando un servicio personalizado y apoyándolos en cada paso de su jornada inmobiliaria.</li>
+                    <li><strong>Innovación:</strong> Adoptamos y aplicamos las mejores prácticas y tecnologías del sector para ofrecer soluciones inmobiliarias modernas y eficientes.</li>
+                    <li><strong>Respeto:</strong> Valoramos y respetamos a cada cliente, socio y miembro del equipo, fomentando un ambiente de trabajo positivo y constructivo.</li>
+                </ul>
+            </section>            
+            <section id="servicios" class="services-section">
+                <h2>Nuestros Servicios</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3>Compra y Venta</h3>
+                        <p>Asesoría y gestión en la compra y venta de inmuebles.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Alquiler</h3>
+                        <p>Ofrecemos una amplia selección de propiedades en alquiler.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Construcción</h3>
+                        <p>Ofrecemos construcción desde cero, refacciones y ampliaciones.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Tasaciones</h3>
+                        <p>Tasamos tu propiedad con los valores más actualizados del mercado.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="propiedades" class="propiedades">
+                <h2>Propiedades</h2>
+                <div id="filtros">
+                    <Br><label for="categoria">Categoría:</label>
+                    <select id="categoria">
+                        <option value="">Todos</option>
+                        <option value="Casas">Casas</option>
+                        <option value="Departamentos">Departamentos</option>
+                        <option value="Terrenos">Terrenos</option>
+                    </select></Br>
+                    <Br><label for="localizacion">Localización:</label>
+                    <select id="localizacion">
+                        <option value="">Todos</option>
+                        <option value="Posadas">Posadas</option>
+                        <option value="Garupa">Garupá</option>
+                        <option value="Candelaria">Candelaria</option>
+                    </select></Br>
+                    <Br><label for="precio">Precio máximo:</label>
+                    <input type="number" id="precio" min="2500"></Br>
+                    <Br></Br>
+                </div>
+
+                <div id="lista-propiedades">
+
+                    <!-- aquí se cargarán las propiedades con JavaScript -->
+
+                </div>
+
+
+               
+            </section>
+            <section id="contacto" class="contact-section">
+                <h2>Contacto</h2>
+                <p>¿Tienes alguna pregunta? Contáctanos y te ayudaremos.</p>
+                <form action="#">
+                    <input type="text" placeholder="Nombre" required>
+                    <input type="email" placeholder="Correo" required>
+                    <textarea placeholder="Mensaje" required></textarea>
+                    <button type="submit" class="btn">Enviar</button>
+                </form>
+            </section> 
+        </section>
+    </main>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('contextmenu', event => event.preventDefault());
+    </script>
+    <footer>
+        Vanesa Parcellier Bienes Raíces &copy; 2024
+    </footer>
+
+</body>
+
+</html>
