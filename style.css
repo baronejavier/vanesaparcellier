@@ -26,8 +26,7 @@ body {
 
 /* Estilo del encabezado */
 header {
-    background-color: #35424a;
-    color: white;
+    background-color: #35424a;   
     padding: 20px 0;
     text-align: center;
 }
@@ -35,6 +34,13 @@ header {
 header h1 {
     font-size: 4rem;
     line-height: 1.2;
+    color: rgb(243, 167, 211);
+}
+
+header h2 {
+    font-size: 4rem;
+    line-height: 1.2;
+    color: rgb(255, 255, 255);
 }
 
 nav {
@@ -57,14 +63,14 @@ nav ul li a {
     color: white;
     text-decoration: none;
     padding: 10px 20px;
-    background-color: #e8491d;
+    background-color: #e67ed4;
     border-radius: 5px;
     transition: background-color 0.3s;
     font-size: 1.5rem;
 }
 
 nav ul li a:hover {
-    background-color: #d7370f;
+    background-color: #b31899;
 }
 
 /* Sección General */
@@ -206,13 +212,14 @@ footer {
     margin-bottom: 20px;
     overflow: hidden; /* Para ocultar cualquier contenido que sobresalga */
     box-sizing: border-box; /* Para incluir el padding y border en el ancho total */
+    max-width: 500px;
+    text-align: justify;
 }
 
 .propiedad img {
     width: 100%;
-    height: 1000px; /* Establece la altura fija de las imágenes */
+    height: auto; /* Establece la altura fija de las imágenes */
     object-fit: cover; /* Asegura que la imagen cubra el contenedor sin deformarse */
-    max-width: 500px; /* Limita el ancho máximo de las imágenes */
     display: block; /* Elimina el espacio blanco debajo de la imagen */
 }
 
@@ -221,4 +228,43 @@ footer {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+}
+
+/* Estilos para las construcciones */
+.construccion {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+    overflow: hidden; /* Para ocultar cualquier contenido que sobresalga */
+    box-sizing: border-box; /* Para incluir el padding y border en el ancho total */
+    max-width: 500px;
+    text-align: justify;
+}
+
+.construccion img {
+    width: 100%;
+    height: auto; /* Establece la altura fija de las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin deformarse */
+    display: block; /* Elimina el espacio blanco debajo de la imagen */
+}
+
+/* Estilo para el contenedor de las construcciones */
+#lista-construccion {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Estilos del botón flotante de WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    width: 15%; /* Ancho cuadrado */
+    height: 15%; /* Altura cuadrada */
+    background-image: url(img/whatsappboton.png); /* Ruta de tu imagen */
+    background-size: cover; /* Para que la imagen se ajuste al botón */
+    text-indent: -9999px; /* Oculta el texto del botón */
+    cursor: pointer;
+    background-position: center; /* Posición centrada de la imagen */
 }
