@@ -216,7 +216,7 @@ function mostrarPropiedades() {
         // Añadir evento al botón de WhatsApp
         const btnWhatsapp = document.getElementById(`btnWhatsapp-${index}`);
         btnWhatsapp.addEventListener('click', () => {
-            const mensaje = `Hola Vanesa, quisiera más información sobre ${prop.nombre}`;
+            const mensaje = `Hola Vanesa, quisiera agendar una visita de la propiedad ${prop.nombre}`;
             const telefono = '3765383612'; // Número de teléfono de destino
             const url = `https://api.whatsapp.com/send?phone=${telefono}&text=${encodeURIComponent(mensaje)}`;
             window.open(url);
@@ -235,18 +235,17 @@ mostrarPropiedades();
 const construcciones = [
     {
         nombre: "Cabaña de Eucalipto",
-        descripcion: `Construcción desde la base.
-Cabañero Eucalipto.
+        descripcion: `Base: Pilotes de hormigon de cemento, hierros , ripio y arena.
+ Cabañero Machimbre de Pino o Eucalipto.
 Frente inglés o cabañero de 1 pulgada. 
 Primera calidad.
-Estructura de la casa de tirantes de 2*3/2*4/2*5.
-Baño de mampostería de ladrillo del 12 hueco. Revestimiento machimbre de PVC y vinilo. 
-Artefactos Ferrum, Vanitory.
+Estructura de la casa de tirantes de 2x3/2x4/2x5.
+Baño: piso de madera con alfombra de vinilo y pared de PVC hasta altura de 2.40m.
 Cocina, Sala comedor.
 Cielorraso a la vista.
 Techo de chapa y aislantes térmicos.
 Puertas de madera.
-Ventanas 1*1 madera/aluminio. 
+Ventanas 1x1 madera/aluminio. 
 Instalación de luz completa. 
 Instalación de agua fría y caliente.
 
@@ -261,19 +260,12 @@ Instalación de agua fría y caliente.
 
     {
         nombre: "Cabaña de Quebracho Blanco",
-        descripcion: `Construcción desde la base.
-Frente inglés o cabañero de 1 pulgada. 
-Primera calidad.
-Estructura de la casa de tirantes de 2*3/2*4/2*5.
-Baño de mampostería de ladrillo del 12 hueco. Revestimiento machimbre de PVC y vinilo. 
-Artefactos Ferrum, Vanitory.
-Cocina, Sala comedor.
-Cielorraso a la vista.
-Techo de chapa y aislantes térmicos.
-Puertas de madera.
-Ventanas 1*1 madera/aluminio. 
-Instalación de luz completa. 
-Instalación de agua fría y caliente.
+        descripcion: `
+
+        
+Quebracho blanco base de hormigón o durmientes de quebracho. Estructura de pared de 20cm de ancho, 10cm de espesor y 2.70-2.40m de largo. 
+Techo a la vista recubierto de machimbre aislante y chapa de cinc. Baño con ladrillos y reboque, cerámica, inodoro con mochila de descarga, bided. 
+Mesada con pileta lavatorio, canillas frio calor, ducha con perillas frio calor. Ventana a elección del cliente de madera o aluminio.
 
 `,
         precioPorMetroCuadrado: 670,
@@ -286,11 +278,11 @@ Instalación de agua fría y caliente.
 
     {
         nombre: "Cabaña de Tronco de Eucalipto",
-        descripcion: `Construcción desde la base.
+        descripcion: `Cabaña de tronco. Pilote de cemento, tirantes 2x6, piso flotante de machimbre.
+        Construcción desde la base.
 Frente inglés o cabañero de 1 pulgada. 
 Primera calidad.
-Baño de mampostería de ladrillo del 12 hueco. Revestimiento machimbre de PVC y vinilo. 
-Artefactos Ferrum, Vanitory.
+Baño con ladrillo revocado y cerámica. Todos los artefactos.
 Cocina, Sala comedor.
 Cielorraso a la vista.
 Techo de chapa y aislantes térmicos.
@@ -345,7 +337,7 @@ function mostrarConstrucciones() {
         // Añadir evento al botón de WhatsApp
         const btnWhatsapp = document.getElementById(`btnWhatsappConstruccion-${index}`);
         btnWhatsapp.addEventListener('click', () => {
-            const mensaje = `Hola, quisiera más información sobre ${construccion.nombre}`;
+            const mensaje = `Hola, quisiera presupuesto de ${construccion.nombre}`;
             const telefono = '3765383612'; // Número de teléfono de destino
             const url = `https://api.whatsapp.com/send?phone=${telefono}&text=${encodeURIComponent(mensaje)}`;
             window.open(url);
