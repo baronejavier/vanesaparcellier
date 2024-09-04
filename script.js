@@ -205,6 +205,53 @@ Descripción:<br>
 Este departamento es perfecto para quienes buscan comodidad y un buen espacio en un lugar estratégico de Villa Cabello. `
     },
 
+    {
+        nombre: "Casa en venta Av. Centenario y Monseñor de Andrea",
+        localizacion: "Posadas",
+        categoria: "Casas",
+        precio: 74000,
+        imagenes: [
+            "img/Centenario y Monseñor de Andrea1.jpg",
+            "img/Centenario y Monseñor de Andrea2.jpg",
+            "img/Centenario y Monseñor de Andrea3.jpg"
+        ],
+        descripcion:
+`Características Principales: <br>
+• Dormitorios: 2 
+• Baños: 2 (¡Uno con hidromasajes!)
+• Antigüedad: A Estrenar 
+• Expensas: $0 
+• Superficies y Medidas: Frente: 8 m Fondo: 16 m <br>
+Descripción: <br>
+Esta excelente propiedad en venta se encuentra en una ubicación estratégica en Posadas, en el Barrio Mangal. La casa cuenta con:
+2 Habitaciones cómodas 
+2 Baños modernos, uno con hidromasajes 
+• Amplio living para disfrutar en familia 
+• Comedor luminoso 
+• Cocina equipada 
+• Garage para tu vehículo 
+• Patio con parrilla ideal para asados 
+• Pileta para refrescarte en verano <br>
+Servicios: <br>
+• Agua Corriente 
+• Cloaca 
+• Electricidad 
+• Pavimento <br>
+Ambientes: <br>
+• Cocina 
+• Comedor 
+• Jardín 
+• Lavadero 
+• Living 
+• Patio <br>
+ Adicionales: <br>
+• Parrilla para tus asados 
+• Apto para mascotas 
+• Pileta 
+• Lavadero independiente 
+Esta propiedad es perfecta para quienes buscan comodidad, modernidad, y un excelente espacio al aire libre. `
+    },
+
 
     {
         nombre: "Departamento en Altos de Posadas",
@@ -267,10 +314,10 @@ function mostrarPropiedades() {
 
         propiedadDiv.innerHTML = `
             <h3>${prop.nombre}</h3>
-            <p>${prop.descripcion}</p>
-            <p>Localización: ${prop.localizacion}</p>
-            <p>Categoria: ${prop.categoria}</p>
             <p>Precio: U$D ${prop.precio}</p>
+            <p>Categoria: ${prop.categoria}</p>
+            <p>Localización: ${prop.localizacion}</p>
+            <p>${prop.descripcion}</p>
             <button id="btnWhatsapp-${index}">Agenda tu visita</button>
         `;
 

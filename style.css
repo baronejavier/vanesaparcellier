@@ -27,8 +27,13 @@ body {
 /* Estilo del encabezado */
 header {
     background-color: #35424a;   
-    padding: 20px 0;
+    padding: 100px 0;
     text-align: center;
+    background-image: url('img/portada\ costanera\ indio.jpg');
+    background-size: cover; /* La imagen se ajustará para cubrir todo el espacio disponible */
+    background-position: center; /* La imagen se centrará en el encabezado */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
 }
 
 header h1 {
