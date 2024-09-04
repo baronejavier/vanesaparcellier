@@ -140,6 +140,73 @@ Medidas 10x25m.
     },
 
     {
+        nombre: "Casa Villa Cabello. Av. López y Planes & Ramón Ayala.",
+        localizacion: "Posadas",
+        categoria: "Casas",
+        precio: 87000,
+        imagenes: [
+            "img/villa cabello1.jpg",
+            "img/villa cabello2.jpg",
+            "img/villa cabello3.jpg"
+        ],
+        descripcion:
+`Ubicación: Av. López y Planes & Ramón Ayala, zona Villa Cabello.<br>
+Características Principales:<br>
+•Dormitorios: 3
+•Baños: 2
+•Cocheras: 1
+•Antigüedad: A estrenar
+•Expensas: $0 <br>
+Superficies y Medidas:
+•Frente: 11.30 m
+•Fondo: 20 m<br>
+Descripción:<br>
+•Amplio y luminoso living/comedor
+•Acogedor estar con cocina a leña
+•Lavadero independiente
+•Cocina espaciosa
+•Patio con césped y parrilla
+•Habitación extra con baño en el patio
+•Garaje incluido<br>
+Importante: No se aceptan permutas.`
+    },
+
+    {
+        nombre: "Departamento Villa Cabello. Chacra 149.",
+        localizacion: "Posadas",
+        categoria: "Departamentos",
+        precio: 40000,
+        imagenes: [
+            "img/ch149 1.jpg",
+            "img/ch149 2.jpg",
+            "img/ch149 3.jpg"
+        ],
+        descripcion:
+`📍 Ubicación: Chacra 149, 2do piso, Villa Cabello<br>
+
+Características principales:<br>
+
+• 3 Habitaciones (¡2 con Aire Acondicionado! )
+• Sala Comedor 
+• Cocina 
+• Lavadero 
+• Balcón cerrado al frente 
+• Ampliación de patio trasero de 6x9 m.
+• Parrilla para asados <br>
+Servicios:<br>
+• Agua Corriente 
+• Electricidad 
+• Pavimento <br>
+Descripción:<br>
+• Cocina
+• Comedor 
+• Lavadero 
+• Living <br>
+Este departamento es perfecto para quienes buscan comodidad y un buen espacio en un lugar estratégico de Villa Cabello. `
+    },
+
+
+    {
         nombre: "Departamento en Altos de Posadas",
         localizacion: "Posadas",
         categoria: "Departamentos",
