@@ -125,8 +125,7 @@ Zona con alto potencial de crecimiento.`
 Disfruta de cada día en esta hermosa casa, con una hermosa piscina para relajarte y refrescarte en los días calurosos.
 Ubicada en plena ciudad, tendrás todo lo que necesitas a tu alcance.
 Barrio judicial. Monseñor de Andrea & Centenario.
-Medidas 10x25m.
-<p></p>
+Medidas 10x25m.<Br>    
 • 4 habitaciones 
 • Living 
 • Cocina 
@@ -263,7 +262,69 @@ Esta propiedad es perfecta para quienes buscan comodidad, modernidad, y un excel
             "img/altos de posadas2.jpg",
             "img/altos de posadas3.jpg"
         ],
-        descripcion: `Centro de Posadas. Esquina 25 de Mayo y Belgrano. 2 habitaciones. Cochera. Primer nivel piso 10. Vista increíble al río Paraná.`
+        descripcion: `Centro de Posadas. Esquina 25 de Mayo y Belgrano. 2 habitaciones. Cochera. Primer nivel piso 10. Vista increíble al río Paraná.
+        Ofrecemos un hermoso departamento céntrico con balcón y vista impresionante al río Paraná 
+Disfruta de la tranquilidad y la belleza natural desde tu propio hogar 
+• Ubicación céntrica, a pocos pasos de comercios, restaurantes y servicios
+• Departamento amplio y luminoso con 2 dormitorios y 2 baños
+• Balcón con vista panorámica al río Paraná
+• Cocina amoblada
+• Sala de estar con amplias ventanas y vista al río
+• Seguridad 24 horas y estacionamiento privado
+ No te pierdas la oportunidad de vivir en un lugar único y exclusivo.`
+    },
+
+    {
+        nombre: "Estacionamiento y Depósito sobre Av.Uruguay",
+        localizacion: "Posadas",
+        categoria: "Casas",
+        precio: 87000,
+        imagenes: [
+            "img/EstacionamientoUruguay1.jpg",
+            "img/EstacionamientoUruguay2.jpg",
+            "img/EstacionamientoUruguay3.jpg"
+        ],
+        descripcion: `Características Principales: <br>
+Terreno: 255 m² (17m de frente x 15m de fondo)
+Superficie total construida: 100 m² (70 m² en planta baja y 30 m² en 1er piso) <br>
+• Estacionamiento para varios autos 
+• Portón de acceso nuevo 
+• Depósito con local 
+• Techo y termotanque nuevos 
+• Baño recién remodelado 
+• Pintura reciente <br>
+Servicios: 
+• Agua Corriente 
+• Electricidad 
+• Pavimento <br>
+Este galpón es ideal para quienes buscan un espacio multifuncional, perfecto como estacionamiento o depósito. ¡Listo para usar con todo renovado!.`
+    },
+
+    {
+        nombre: "Departamento Villa Cabello CH149",
+        localizacion: "Posadas",
+        categoria: "Departamento",
+        precio: 42000,
+        imagenes: [
+            "img/Chacra 149 Eva Peron 1.jpg",
+            "img/Chacra 149 Eva Peron 2.jpg",
+            "img/Chacra 149 Eva Peron 3.jpg"
+        ],
+        descripcion: `Departamento en Venta en Villa Cabello, Posadas <br>
+Ubicación: Chacra 149 sobre Eva Perón, 1° Piso en Esquina <br>
+Características Principales: <br>
+• Antigüedad: A estrenar 
+• Expensas: $0 
+Descripción: Excelente departamento en Villa Cabello se encuentra en un 1° piso, ideal para quienes buscan comodidad y accesibilidad. La propiedad cuenta con:
+• Sala/comedor amplio y luminoso 
+• Cocina equipada con extractor 
+• 3 habitaciones, una de ellas con vestidor
+• Baños: 1 <br>
+Servicios: 
+• Agua Corriente 
+• Cloaca 
+• Electricidad
+• Pavimento.`
     },
     
 
@@ -318,7 +379,7 @@ function mostrarPropiedades() {
             <p>Categoria: ${prop.categoria}</p>
             <p>Localización: ${prop.localizacion}</p>
             <p>${prop.descripcion}</p>
-            <button id="btnWhatsapp-${index}">Agenda tu visita</button>
+            <button id="btnWhatsapp-${index}" class="btn-whatsapp">Agenda tu visita</button>
         `;
 
         // Agregar el contenedor de imágenes a la propiedad
@@ -439,7 +500,7 @@ function mostrarConstrucciones() {
             <h3>${construccion.nombre}</h3>
             <p>${construccion.descripcion}</p>
             <p>Precio por m²: U$D ${construccion.precioPorMetroCuadrado}</p>
-            <button id="btnWhatsappConstruccion-${index}">Solicitar presupuesto</button>
+            <button id="btnWhatsappConstruccion-${index}" class="btn-whatsapp">Solicitar presupuesto</button>
         `;
 
         // Agregar el contenedor de imágenes a la construcción
