@@ -275,3 +275,24 @@ footer {
     cursor: pointer;
     background-position: center; /* Posición centrada de la imagen */
 }
+
+.btn-whatsapp {
+    background-color: #25D366; /* Color de fondo verde WhatsApp */
+    color: white; /* Texto en blanco */
+    padding: 12px 24px; /* Espaciado interno del botón */
+    font-size: 16px; /* Tamaño del texto */
+    border: none; /* Sin bordes */
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer; /* Cambio de cursor al pasar sobre el botón */
+    display: inline-block; /* Para alinearse correctamente con otros elementos */
+    transition: background-color 0.3s ease; /* Animación al pasar el mouse */
+  }
+  
+  .btn-whatsapp:hover {
+    background-color: #128C7E; /* Cambio de color al pasar el mouse */
+  }
+  
+  .btn-whatsapp:active {
+    background-color: #075E54; /* Color cuando se hace clic */
+  }
+  
