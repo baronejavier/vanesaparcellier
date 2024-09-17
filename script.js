@@ -379,7 +379,6 @@ Ambientes:
         ],
         descripcion: ` Venta de Casa en Posadas <br>
 Ubicación: Jauretche y Av. Andresito <br>
-Precio: USD 55.000 <br>
 
 ¡No dejes pasar esta increíble oportunidad de estrenar tu casa en una de las mejores zonas de Posadas! <br>
 
