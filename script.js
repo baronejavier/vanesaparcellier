@@ -327,7 +327,78 @@ Servicios:
 • Pavimento.`
     },
     
+    {
+        nombre: "Casa en Santa Helena",
+        localizacion: "Garupá",
+        categoria: "Casas",
+        precio: 46500,
+        imagenes: [
+            "img/helena 1.jpg",
+            "img/helena 2.jpg",
+            "img/helena 3.jpg"
+        ],
+        descripcion: ` ¡Excelente Oportunidad en Santa Helena! <br>
+Dirección: Calle Chivato Casa 13, Mz 38 <br>
 
+Si estás buscando tu nuevo hogar, ¡esta es la opción perfecta para vos! <br>
+
+Características principales: <br>
+
+Dormitorios: 3 (¡uno con placard incluido!) <br>
+Baños: 1 baño completo con ducha eléctrica <br>
+Antigüedad: A estrenar <br>
+Expensas: $0 <br>
+Medidas: Frente: 10.30 m, ondo: 25 m<br>
+Descripción: <br>
+Esta hermosa casa cuenta con una cocina y living comedor integrados, ideal para disfrutar de los momentos en familia. Las aberturas tienen rejas para mayor seguridad. Además, posee un patio delantero y otro trasero, perfecto para disfrutar del aire libre.
+Garaje cubierto para 1 vehículo
+Entrada adicional para 2 vehículos <br>
+Servicios:
+• Agua corriente
+• Cloacas
+• Electricidad
+• Pavimento <br>
+Ambientes:
+• Cocina
+• Comedor
+• Lavadero
+• Living
+• Patio <br>
+¡No te pierdas esta oportunidad única de mudarte a Santa Helena!`
+    },
+
+    {
+        nombre: "Casa en Posadas",
+        localizacion: "Posadas",
+        categoria: "Casas",
+        precio: 57000,
+        imagenes: [
+            "img/Jauretche 1.jpg",
+            "img/Jauretche 2.jpg",
+            "img/Jauretche 3.jpg"
+        ],
+        descripcion: ` Venta de Casa en Posadas <br>
+Ubicación: Jauretche y Av. Andresito <br>
+Precio: USD 55.000 <br>
+
+¡No dejes pasar esta increíble oportunidad de estrenar tu casa en una de las mejores zonas de Posadas! <br>
+
+Características Principales: <br>
+
+Dormitorios: 3 <br>
+Baños: 2 <br>
+Antigüedad: A estrenar <br>
+Expensas: $0 <br>
+Descripción:
+• Esta propiedad cuenta con todo lo necesario para una vida cómoda y tranquila. Disfrutá de amplios espacios que incluyen: <br>
+• Una sala de estar para relajarte
+• Cocina moderna
+• Living espacioso
+• Comedor integrado
+• Patio para momentos al aire libre
+• Piscina para refrescarte en verano <br>
+Ideal para familias que buscan confort y una excelente ubicación en Posadas!`
+    },
     
 ];
 
