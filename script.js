@@ -398,6 +398,30 @@ Descripción:
 • Piscina para refrescarte en verano <br>
 Ideal para familias que buscan confort y una excelente ubicación en Posadas!`
     },
+
+    {
+        nombre: "Terreno Miguel Lanus en esquina",
+        localizacion: "Posadas",
+        categoria: "Terrenos",
+        precio: 14000,
+        imagenes: [
+            "img/pipo y montoya 1.jpg",
+            "img/pipo y montoya 2.jpg",
+
+        ],
+        descripcion: `TERRENO EN VENTA EN ESQUINA - Miguel Lanús Calle Santo Pipó y Ruiz de Montoya. IDEAL PARA CONSTUÍR  DEPARTAMENTOS PARA ALQUILAR <Br>
+Antigüedad: A Estrenar<Br>
+Expensas: $0<Br>
+
+Superficies y Medidas<Br>
+•Terreno: 360 m²
+•Frente: 10 m
+•Fondo: 36 m <Br>
+Descripción <Br>
+¿Estás buscando el terreno perfecto para construir tu casa? ¡Lo tenemos! Este amplio terreno en esquina te ofrece una ubicación ideal con servicios de agua corriente y electricidad ya disponibles.<Br>
+
+Para más información, comunícate con nosotros. ¡No dejes pasar esta oportunidad!`
+    },
     
 ];
 
