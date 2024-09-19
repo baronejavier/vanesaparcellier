@@ -414,13 +414,47 @@ Antigüedad: A Estrenar<Br>
 Expensas: $0<Br>
 
 Superficies y Medidas<Br>
-•Terreno: 360 m²
-•Frente: 10 m
-•Fondo: 36 m <Br>
+• Terreno: 360 m²
+• Frente: 10 m
+• Fondo: 36 m <Br>
 Descripción <Br>
 ¿Estás buscando el terreno perfecto para construir tu casa? ¡Lo tenemos! Este amplio terreno en esquina te ofrece una ubicación ideal con servicios de agua corriente y electricidad ya disponibles.<Br>
 
 Para más información, comunícate con nosotros. ¡No dejes pasar esta oportunidad!`
+    },
+
+    {
+        nombre: "Terreno en Av. Cocomarola y Cabo de Hornos",
+        localizacion: "Posadas",
+        categoria: "Terrenos",
+        precio: 19000,
+        imagenes: [
+            "img/cocomarola 1.jpg",
+            "img/cocomarola 2.jpg",
+            "img/cocomarola 3.jpg",
+        ],
+        descripcion: `LOTE EN VENTA NIVELADO Y CON SUELO FIRME<Br>
+Antigüedad: A Estrenar<Br>
+Expensas: $0<Br>
+
+Superficies y Medidas<Br>
+• Frente: 11.75 m
+• Fondo: 35.56 m<Br>
+Descripción<Br>
+¡Oportunidad! Terreno en esquina, nivelado y suelo firme de tierra colorada. Perfecto para quienes buscan una base sólida para construir.<Br>
+
+Cuenta con:<Br>
+
+• Alumbrado público
+• Agua potable
+• Calle empedrada
+• Ubicación conveniente, con acceso a colectivos, supermercados y a tan solo 20 minutos del centro.<Br>
+
+Servicios disponibles:<Br>
+
+• Agua corriente
+• Electricidad<Br>
+`
     },
     
 ];
