@@ -409,7 +409,7 @@ Ideal para familias que buscan confort y una excelente ubicación en Posadas!`
             "img/pipo y montoya 2.jpg",
 
         ],
-        descripcion: `TERRENO EN VENTA EN ESQUINA - Miguel Lanús Calle Santo Pipó y Ruiz de Montoya. IDEAL PARA CONSTUÍR  DEPARTAMENTOS PARA ALQUILAR <Br>
+        descripcion: `TERRENO EN VENTA EN ESQUINA - Miguel Lanús Calle Santo Pipó y Ruiz de Montoya. IDEAL PARA CONSTRUÍR  DEPARTAMENTOS PARA ALQUILAR <Br>
 Antigüedad: A Estrenar<Br>
 Expensas: $0<Br>
 
