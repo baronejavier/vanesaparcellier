@@ -456,6 +456,25 @@ Servicios disponibles:<Br>
 • Electricidad<Br>
 `
     },
+
+    {
+        nombre: "Terreno con cabaña en Santa Inés",
+        localizacion: "Garupá",
+        categoria: "Casas",
+        precio: 32000,
+        imagenes: [
+            "img/chogui1.jpg",
+            "img/chogui2.jpg",
+            "img/chogui3.jpg",
+        ],
+        descripcion: `Este lote de 15x40 metros te ofrece la oportunidad ideal de inversión. 
+        Cuenta con una perforación de 100 metros y un sistema automático de bombeo ya instalado,
+         garantizando un acceso eficiente al agua. Además, la propiedad incluye una excelente cabaña de madera de 35m² 
+         lista para habitar, perfecta para quienes buscan tranquilidad o una vivienda lista para expandir.
+          El servicio de luz monofásica está en pleno funcionamiento. Es un lugar ideal
+          para descansar, a tan solo 20 minutos de Posadas ¡No dejes pasar esta excelente 
+          oportunidad!`
+    },
     
 ];
 
