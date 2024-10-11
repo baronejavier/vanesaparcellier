@@ -69,9 +69,9 @@ Elegí el encanto natural, la propuesta de vivir a 20' de la ciudad, rodeado de 
     },
 
     {
-        nombre: "Casa Quinta",
+        nombre: "Casa Quinta en Santa Inés",
         localizacion: "Garupá",
-        categoria: "Terrenos",
+        categoria: "Casas",
         precio: 100000,
         imagenes: [
             "img/casa quinta1.jpg",
