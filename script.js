@@ -400,8 +400,8 @@ Ideal para familias que buscan confort y una excelente ubicación en Posadas!`
     },
 
     {
-        nombre: "Terreno Miguel Lanus en esquina",
-        localizacion: "Posadas",
+        nombre: "Terreno Barrio Nuevo Garupá en esquina",
+        localizacion: "Garupá",
         categoria: "Terrenos",
         precio: 14000,
         imagenes: [
@@ -409,7 +409,7 @@ Ideal para familias que buscan confort y una excelente ubicación en Posadas!`
             "img/pipo y montoya 2.jpg",
 
         ],
-        descripcion: `TERRENO EN VENTA EN ESQUINA - Miguel Lanús Calle Santo Pipó y Ruiz de Montoya. IDEAL PARA CONSTRUÍR  DEPARTAMENTOS PARA ALQUILAR <Br>
+        descripcion: `TERRENO EN VENTA EN ESQUINA - Barrio Nuevo Garupá, Calle Santo Pipó y Ruiz de Montoya. Cercanía supermercado y escuela.<Br>
 Antigüedad: A Estrenar<Br>
 Expensas: $0<Br>
 
