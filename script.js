@@ -1,1043 +1,671 @@
-const productos = [
+  const propiedades = [
     {
-        nombre: "Set de mate de Stitch",
-        oferta: true,
-        categoria: "Mates",
-        precio: 19500,
-        unidades: 1,
-        imagen: "img/mate set.png",
-        descripcion: "Set de mate de Stitch y Ángel. Incluye el mate, bombilla, yerbero, azucarero y cucharita."
+        nombre: "Loteo Club de Campo Santa Cecilia",
+        localizacion: "Candelaria",
+        categoria: "Terrenos",
+        precio: 37000,
+        imagenes: [
+            "img/santa cecilia1.jpg",
+            "img/santa cecilia2.jpg",
+            "img/santa cecilia3.jpg"
+        ],
+        descripcion: `Lote de 20x50m mensurado y amojonado.
+                          Barrio listo para construir, con posibilidad de escritura.
+                          Tiene una playa con muelle y sector náutico a orillas del río Paraná, espacios verdes, dos salones de usos múltiples, cancha de tenis y de fútbol.
+                          Las calles están asfaltadas, y tiene todos los servicios subterráneos (luz, agua y cloaca).
+                          Pensado como un magnífico lugar para vivir o tener una casa de fin de semana, el proyecto tiene grandes espacios libres, una espléndida arboleda tan solo a 30 km de Posadas. Está ubicado en el corazón de la Cuenca de la Plata en una zona con un gran crecimiento demográfico y auge de consolidación de barrios privados.`
     },
+
     {
-        nombre: "Mates grandes",
-        oferta: true,
-        categoria: "Mates",
-        precio: 10000,
-        unidades: 1,
-        imagen: "img/mate2500.jpg",
-        descripcion: "Mates de los personajes Stitch, Ángel, Kitty y de Hogwarts (Harry Potter) impresos con material PLA. El precio es por unidad."
+        nombre: "Loteo La Candelaria",
+        localizacion: "Candelaria",
+        categoria: "Terrenos",
+        precio: 27000,
+        imagenes: [
+            "img/la candelaria1.png",
+            "img/la candelaria2.jpg",
+            "img/la candelaria3.jpg"
+        ],
+        descripcion: `Lote de 23x32m.
+Barrio Cerrado con Portal de Ingreso y Servicio de Seguridad 24hs.
+Tendido eléctrico y agua.
+Cordón Cuneta.
+Título de Propiedad.
+Cuenta con una espléndida vista al Arroyo Garupá, y la Reserva Urutaú. Lugar ideal para vivir o tener una casa de fin de semana. A 20 minutos de Posadas.`
     },
+
     {
-        nombre: "Mate de Rugby",
-        oferta: true,
-        categoria: "Mates",
-        precio: 9500,
-        unidades: 1,
-        imagen: "img/rugby.png",
-        descripcion: "Mate de pelota de Rugby, impreso con material PLA y pintado a mano. El precio es por unidad."
-    },
-    {
-        nombre: "Mate de Pokemon",
-        oferta: true,
-        categoria: "Mates",
-        precio: 9000,
-        unidades: 1,
-        imagen: "img/mate charmander.png",
-        descripcion: "Mate de Pokemon Charmander, impreso con material PLA y pintado a mano. El precio es por unidad."
-    },
-    {
-        nombre: "Mate de carpincho",
-        oferta: true,
-        categoria: "Mates",
-        precio: 9000,
-        unidades: 1,
-        imagen: "img/carpincho mate.jpg",
-        descripcion: "Mate de carpincho, impreso con material PLA. El precio es por unidad."
-    },
-    {
-        nombre: "Mate y posavaso Hello Kitty",
-        oferta: true,
-        categoria: "Mates",
-        precio: 10000,
-        unidades: 2,
-        imagen: "img/kitty.png",
-        descripcion: "Mate y posavaso de Hello Kitty, impreso con material PLA. El precio es por el conjunto."
-    },
-    {
-        nombre: "Mate de calavera",
-        oferta: false,
-        categoria: "Mates",
-        precio: 17000,
-        unidades: 1,
-        imagen: "img/mate calavera.jpg",
-        descripcion: "Mate de calavera, impreso con material PLA. El precio es por unidad."
-    },
-    {
-        nombre: "Mates de personajes",
-        oferta: true,
-        categoria: "Mates",
-        precio: 7500,
-        unidades: 1,
-        imagen: "img/mate2000.jpg",
-        descripcion: "Mates de los personajes Stitch, Ángel, Hongos de Mario Bross, Chimuelo y Luna, impresos con material PLA. El precio es por unidad."
-    },
-    {
-        nombre: "Mates temáticos",
-        oferta: true,
-        categoria: "Mates",
-        precio: 7500,
-        unidades: 1,
-        imagen: "img/mate1500.jpg",
-        descripcion: "Mates de diamantes y caballos, impresos con material PLA. El precio es por unidad."
-    },
-    {
-        nombre: "Mates personalizados",
-        oferta: false,
-        categoria: "Mates",
-        precio: 8500,
-        unidades: 1,
-        imagen: "img/mate personalizado.jpg",
-        descripcion: "Mates personalizados, impresos con material PLA. El precio es por unidad."
-    },
-    {
-        nombre: "Despolvillador de yerba mate personalizado",
-        oferta: true,
-        categoria: "Mates",
-        precio: 13000,
-        unidades: 1,
-        imagen: "img/despolvillador.jpg",
-        descripcion: "Despolvillador de yerba mate personalizado con su nombre o logo, impreso en 3D con material PLA. Se puede realizar en otros colores. El precio es por unidad."
-    },
-    {
-        nombre: "Estructra de lampara de astronauta",
-        oferta: true,
-        categoria: "Lamparas",
-        precio: 10500,
-        unidades: 1,
-        imagen: "img/astronauta.jpg",
-        descripcion: "Estructura para armar lampara de astronauta sobre la luna,de 18 cm de altura. El precio es por unidad."
-    },
-    {
-        nombre: "Estructra de lampara de la Tierra",
-        oferta: true,
-        categoria: "Lamparas",
-        precio: 8000,
-        unidades: 1,
-        imagen: "img/planeta.jpg",
-        descripcion: "Estructura para armar lampara de la Tierra sobre un pilar de 13 cm de altura. El precio es por unidad."
-    },
-    {
-        nombre: "Macetas de Afrodita y Venus",
-        oferta: true,
-        categoria: "Macetas",
-        precio: 10000,
-        unidades: 1,
-        imagen: "img/venus.jpg",
-        descripcion: "Macetas Venus y Afrodita, de 15 cm de altura. El precio es por unidad."
-    },
-    {
-        nombre: "Macetas Baby Groot",
-        oferta: true,
-        categoria: "Macetas",
-        precio: 11000,
-        unidades: 1,
-        imagen: "img/combo groot.jpg",
-        descripcion: "Macetas Baby Groot, de 15 cm de altura. El precio es por unidad."
-    },
-    {
-        nombre: "Macetas Robert",
-        oferta: true,
-        categoria: "Macetas",
+        nombre: "Loteo La Agustina",
+        localizacion: "Garupá",
+        categoria: "Terrenos",
         precio: 15000,
-        unidades: 4,
-        imagen: "img/RS.jpg",
-        descripcion: "Modelos de maceta Robert, de 8 cm de altura, disponibles en blanco. El precio es por cuatro unidades."
+        imagenes: [
+            "img/la agustina1.jpg",
+            "img/la agustina2.jpg",
+            "img/la agustina3.jpg"
+        ],
+        descripcion: `Lotes de 10x50m sobre Ruta Nacional 105. Barrio Santa Inés.
+Contará con Portal de Entrada con casilla de seguridad.
+Contará con Club House para reuniones, cumpleaños, agasajos.
+Especial comercio o vivienda familiar.`
     },
+
     {
-        nombre: "Macetas de David/ Bob Patiño",
-        oferta: true,
-        categoria: "Macetas",
+        nombre: "Loteo Urutaú Country",
+        localizacion: "Garupá",
+        categoria: "Terrenos",
         precio: 10000,
-        unidades: 1,
-        imagen: "img/david.jpg",
-        descripcion: "Modelos de macetas de David (15 cm) y Bob Patiño (15 cm). El precio es por unidad."
+        imagenes: [
+            "img/urutau1.jpg",
+            "img/urutau2.jpg",
+            "img/urutau3.jpg"
+        ],
+        descripcion: `Lotes de 15x45m en barrio privado Urutaú Country, Barrio Santa Inés.
+Predio de 3 Ha, con una excelente vista al Arroyo Garupá y la reserva natural Urutaú. 
+Calle privada con portal de ingreso. 
+Casilla de seguridad las 24 hs.
+Contará con piscina con solárium y salón de eventos. Idel para casas de fin de semana. 
+Elegí el encanto natural, la propuesta de vivir a 20' de la ciudad, rodeado de verde y naturaleza.`
     },
+
     {
-        nombre: "Macetas de animales",
-        oferta: true,
-        categoria: "Macetas",
-        precio: 10500,
-        unidades: 2,
-        imagen: "img/maceta animales.jpg",
-        descripcion: "Modelos de macetas de gato y perro, de 8 cm de altura, disponibles en transparente, blanco, bronce y negro, con y sin plantas. El precio por dos unidades."
+        nombre: "Casa Quinta en Santa Inés",
+        localizacion: "Garupá",
+        categoria: "Casas",
+        precio: 100000,
+        imagenes: [
+            "img/casa quinta1.jpg",
+            "img/casa quinta2.jpg",
+            "img/casa quinta3.jpg"
+        ],
+        descripcion: `Ubicada en Santa Inés, frente al arroyo Garupá. A 3 Km de la Ruta Nacional 105. Total de 3.2 Hectáreas con pinos y variedad de árboles frutales. Cabaña amoblada, con 2 habitaciones, cocina comedor, baño. Sótano. Galería de 2m que rodea toda la casa.
+Superficie cubierta 180 m2.
+Piscina de 10x5m.`
     },
+
     {
-        nombre: "Macetas de meditación",
-        oferta: true,
-        categoria: "Macetas",
-        precio: 5000,
-        unidades: 1,
-        imagen: "img/cabezas.jpg",
-        descripcion: "Modelos de macetas de meditación de 8 cm de altura, disponibles en transparente, blanco y bronce. El precio es por unidad."
-    },
-    {
-        nombre: "Florero dona y maceta David",
-        oferta: true,
-        categoria: "Adornos",
-        precio: 14500,
-        unidades: 2,
-        imagen: "img/david dona.jpg",
-        descripcion: "Maceta de David y florero dona minimalista, ambos de 15 cm de altura. El precio es de los dos floreros."
-    },
-    {
-        nombre: "Busto y columna griega",
-        oferta: false,
-        categoria: "Adornos",
-        precio: 8000,
-        unidades: 2,
-        imagen: "img/grecia.jpg",
-        descripcion: "Busto de mujer (10 cm de altura) y columna griega (10 cm de altura), impresos con material PLA. El precio es por ambas figuras."
-    },
-    {
-        nombre: "Gatos enamorados 25 cm",
-        oferta: false,
-        categoria: "Adornos",
-        precio: 15500,
-        unidades: 1,
-        imagen: "img/adornos.jpg",
-        descripcion: "Figura de pareja de gatos, 25 cm de altura. El precio es por unidad."
-    },
-    {
-        nombre: "Gatos enamorados 20 cm",
-        oferta: true,
-        categoria: "Adornos",
-        precio: 12000,
-        unidades: 1,
-        imagen: "img/adornos.jpg",
-        descripcion: "Figura de pareja de gatos, 20 cm de altura. El precio es por unidad."
-    },
-    {
-        nombre: "Souvenir alianzas de casamientos",
-        oferta: false,
-        categoria: "Adornos",
-        precio: 9000,
-        unidades: 1,
-        imagen: "img/anillos.jpg",
-        descripcion: "Souvenir para casamientos en forma de alianzas, con las iniciales y colores a elegir. Es de 20 cm x 18,8 cm x 3,5 mm. El precio es por unidad."
-    },
-    {
-        nombre: "Souvenir porta foto",
-        oferta: false,
-        categoria: "Adornos",
-        precio: 18000,
-        unidades: 6,
-        imagen: "img/souvenir.jpg",
-        descripcion: "Souvenir porta foto de dos colores. El nombre es de 12 cm x 5 cm x 1,5 cm. El precio es por 6 unidades."
-    },
-    {
-        nombre: "Cuadritos decorativos",
-        oferta: false,
-        categoria: "Adornos",
-        precio: 13500,
-        unidades: 4,
-        imagen: "img/cuadros1.jpg",
-        descripcion: "Cuadritos decorativos de 22 cm de largo, disponibles en color negro y bronce. El precio es por cuatro unidades."
-    },
-    {
-        nombre: "Cuadritos decorativos tropicales",
-        oferta: false,
-        categoria: "Adornos",
-        precio: 9500,
-        unidades: 3,
-        imagen: "img/cuadros2.jpg",
-        descripcion: "Cuadritos decorativos de 22 cm de largo, disponibles en color negro. El precio es por tres unidades."
-    },
-    {
-        nombre: "Copa del mundo personalizada",
-        oferta: false,
-        categoria: "Adornos",
-        precio: 12500,
-        unidades: 1,
-        imagen: "img/copa.jpg",
-        descripcion: "Copa del mundo, de 22 cm de altura, de material PLA y pintada a mano. El precio es por unidad."
-    },
-    {
-        nombre: "Elefantes de la fortuna",
-        oferta: true,
-        categoria: "Adornos",
-        precio: 7500,
-        unidades: 1,
-        imagen: "img/elefantes.jpg",
-        descripcion: "Figuras de elefantes de la fortuna, de 10 cm de altura. Disponibles en color bronce y blanco. El precio es por unidad."
-    },
-    {
-        nombre: "Porta lápices",
-        oferta: true,
-        categoria: "Adornos",
-        precio: 8500,
-        unidades: 1,
-        imagen: "img/portalapices.jpg",
-        descripcion: "Porta lápices de David (15 cm de altura), Bob Patiño (15 cm de altura) y Baby Groot, y de Homero arbusto. El precio es por unidad."
-    },
-    {
-        nombre: "Cartel domiciliario",
-        oferta: false,
-        categoria: "Adornos",
-        precio: 8500,
-        unidades: 1,
-        imagen: "img/cartel.png",
-        descripcion: "Cartel domiciliario de 20 cm x 10 cm, de plástico PLA en dos colores. El precio es por unidad."
-    },
-    {
-        nombre: "Otros adornos",
-        oferta: false,
-        categoria: "Adornos",
-        precio: 5000,
-        unidades: 1,
-        imagen: "img/otros adornos.jpg",
-        descripcion: "Figura de ángel (15 cm de altura) y de pareja de pingüinos (12 cm de altura) impresas con material PLA. El precio es por unidad."
-    },
-    {
-        nombre: "Demon Slayer",
-        oferta: true,
-        categoria: "Figuras",
-        precio: 9000,
-        unidades: 1,
-        imagen: "img/figuras.jpg",
-        descripcion: "Figuras de Nezuko Kamado (10 cm de altura), Tanjiro Kamado (15 cm de altura), Zenitsu Agatsuma (15 cm de altura) e Inozuke Hashibira (15 cm de altura). Impresas con material PLA. El precio es por unidad."
-    },
-    {
-        nombre: "Nezuko con caja portalapices",
-        oferta: true,
-        categoria: "Figuras",
-        precio: 22000,
-        unidades: 1,
-        imagen: "img/nezuko.jpg",
-        descripcion: "Caja portalapices de Nezuko, de 12 cm de altura, impresa con material PLA. El precio es por unidad."
-    },
-    {
-        nombre: "Itachi Uchiha",
-        oferta: true,
-        categoria: "Figuras",
-        precio: 16500,
-        unidades: 1,
-        imagen: "img/itachi.jpg",
-        descripcion: "Figura de Itachi Uchiha, 15 cm de altura, impresa con material PLA. El precio es por unidad."
-    },
-    {
-        nombre: "Naruto Uzumaki",
-        oferta: true,
-        categoria: "Figuras",
-        precio: 10000,
-        unidades: 1,
-        imagen: "img/naruto.jpg",
-        descripcion: "Figura de Naruto Uzumaki, 20 cm de altura, impresa con material PLA. El precio es por unidad."
-    },
-    {
-        nombre: "Sasuke Uchiha",
-        oferta: true,
-        categoria: "Figuras",
-        precio: 12000,
-        unidades: 1,
-        imagen: "img/sasuke.jpg",
-        descripcion: "Figura de Sasuke Uchiha, 15 cm de altura, impresa con material PLA. El precio es por unidad."
-    },
-    {
-        nombre: "Pochita",
-        oferta: true,
-        categoria: "Figuras",
-        precio: 10000,
-        unidades: 1,
-        imagen: "img/pochita.jpg",
-        descripcion: "Figura de Pochita articulada, 13 cm de altura y 16 cm de largo, impresa con material PLA. El precio es por unidad."
-    },
-    {
-        nombre: "Vegeta 32 cm de altura",
-        oferta: true,
-        categoria: "Figuras",
-        precio: 24500,
-        unidades: 1,
-        imagen: "img/majin vegeta.png",
-        descripcion: "Figura de Vegeta, de 32 cm de altura. Impresa con material PLA y pintada a mano. El precio es por unidad."
-    },
-    {
-        nombre: "Dragon Ball de 20 cm de altura",
-        oferta: true,
-        categoria: "Figuras",
-        precio: 17500,
-        unidades: 1,
-        imagen: "img/DB.jpg",
-        descripcion: "Figuras de Gohan (versión niño y adulto), Frezeer, Goku, Trunks, Vegeta y Gogetta. Todos estos modelos son de 20 cm de altura. Impresas con material PLA. El precio es por unidad."
-    },
-    {
-        nombre: "Dragon Ball de 10 cm de altura",
-        oferta: true,
-        categoria: "Figuras",
-        precio: 11000,
-        unidades: 2,
-        imagen: "img/DB2.jpg",
-        descripcion: "Figuras de Piccolo, Goku, Gohan, Vegeta (con distintas transformaciones) y Gogetta. Todos estos modelos son de 10 cm de altura. Impresas con material PLA. El precio es por dos unidades."
-    },
-    {
-        nombre: "Pokemon",
-        oferta: true,
-        categoria: "Figuras",
-        precio: 36000,
-        unidades: 4,
-        imagen: "img/pokemon.jpg",
-        descripcion: "Figuras de Squirtle (10 cm de altura), Charmander (10 cm de altura), Bulbasaur (8 cm de altura), Pikachu (10 cm de altura) y Jigglypuff (8 cm de altura). Impresas con material PLA. El precio es por cuatro unidades."
-    },
-    {
-        nombre: "La Bella y la Bestia",
-        oferta: true,
-        categoria: "Figuras",
-        precio: 35000,
-        unidades: 5,
-        imagen: "img/bella y bestia.jpg",
-        descripcion: "Figuras de Din Don (13 cm de altura), Bella (10 cm de altura), Sra.Potts (12 cm de altura), Chip (7 cm de altura) y Lumiere (15 cm de altura). Impresas con material PLA. El precio es por las cinco unidades."
-    },
-    {
-        nombre: "Caballeros del zodiaco (Saint Seiya)",
-        oferta: true,
-        categoria: "Figuras",
-        precio: 15500,
-        unidades: 1,
-        imagen: "img/CZ.png",
-        descripcion: "Figuras de Seiya de Pegasus y Afrodita de Piscis. Estos dos modelos son de 15 cm de altura. Impresas con material PLA. El precio es por unidad."
-    },
-    {
-        nombre: "Pandora Box de Pegasus",
-        oferta: true,
-        categoria: "Figuras",
-        precio: 18000,
-        unidades: 1,
-        imagen: "img/CZ2.jpg",
-        descripcion: "Pandora Box de Pegasus, de 12 cm de altura. Impresa con material PLA. Viene con un llavero de regalo."
-    },
-    {
-        nombre: "Attack on Titan",
-        oferta: true,
-        categoria: "Figuras",
-        precio: 18500,
-        unidades: 1,
-        imagen: "img/AT.jpg",
-        descripcion: "Figuras de Eren Yeager (versión Titan) y Levi Ackerman. Estos dos modelos son de 20 cm de altura. Impresas con material PLA. El precio es por unidad."
-    },
-    {
-        nombre: "Mario",
-        oferta: false,
-        categoria: "Figuras",
-        precio: 10000,
-        unidades: 1,
-        imagen: "img/mario.jpg",
-        descripcion: "Figura de Mario, de 15 cm de altura. Impresa con material PLA. El precio es por unidad."
-    },
-    {
-        nombre: "Sonic",
-        oferta: true,
-        categoria: "Figuras",
-        precio: 10500,
-        unidades: 1,
-        imagen: "img/Sonic.jpg",
-        descripcion: "Figura de Sonic de 10 cm de altura, impresa con material PLA. El precio es por unidad."
-    },
-    {
-        nombre: "Five Nights At Freddy",
-        oferta: true,
-        categoria: "Figuras",
-        precio: 6000,
-        unidades: 1,
-        imagen: "img/freddy.jpg",
-        descripcion: "Figura articulada de Five Nights At Freddy, de 15 cm de largo. El precio es por unidad."
-    },
-    {
-        nombre: "Speakerman large de Skibidi Toilet",
-        oferta: false,
-        categoria: "Figuras",
-        precio: 7000,
-        unidades: 1,
-        imagen: "img/speakerman.jpg",
-        descripcion: "Figura articulada de Speakerman large de Skibidi Toilet, de 19 cm de largo. El precio es por unidad."
-    },
-    {
-        nombre: "Figuras articuladas",
-        oferta: true,
-        categoria: "Figuras",
-        precio: 8500,
-        unidades: 3,
-        imagen: "img/articulados.jpg",
-        descripcion: "Figuras articuladas de Dragon (15 cm de largo), tiburon (15 cm de largo) y el  escinco cocodrilo (Tribolonotus gracilis) de 28 cm de largo. El precio es por los tres modelos."
-    },
-    {
-        nombre: "Messi",
-        oferta: true,
-        categoria: "Figuras",
-        precio: 8000,
-        unidades: 1,
-        imagen: "img/messi.jpg",
-        descripcion: "Figura de Messi con la camiseta con tres estrellas, de 15 cm de altura, impresa con material PLA. El precio es por unidad."
-    },
-    {
-        nombre: "Jesús de Nazaret",
-        oferta: true,
-        categoria: "Figuras",
-        precio: 7000,
-        unidades: 1,
-        imagen: "img/jesus.jpg",
-        descripcion: "Figura de Jesús de Nazaret, de 15 cm de altura, impresa con material PLA. El precio es por unidad."
-    },
-    {
-        nombre: "Portajoystick de Sasuke/ Ironman",
-        oferta: true,
-        categoria: "Gamer",
-        precio: 26500,
-        unidades: 1,
-        imagen: "img/PJ4000.png",
-        descripcion: "Portajoystick o celular de Sasuke y Ironman, impresos con material PLA. El precio es por unidad."
-    },
-    {
-        nombre: "Portajoystick de Call of Duty (Ghost)/ Crash Bandicoot",
-        oferta: true,
-        categoria: "Gamer",
-        precio: 21000,
-        unidades: 1,
-        imagen: "img/PJ3800.jpg",
-        descripcion: "Portajoystick o celular de Call of Duty (Ghost) y Crash Bandicoot, impresos con material PLA. El precio es por unidad."
-    },
-    {
-        nombre: "Portajoystick de Spiderman",
-        oferta: true,
-        categoria: "Gamer",
+        nombre: "Terreno en Miguel Lanús",
+        localizacion: "Posadas",
+        categoria: "Terrenos",
         precio: 15000,
-        unidades: 1,
-        imagen: "img/spiderman.jpg",
-        descripcion: "Portajoystick o celular de Spiderman, impreso con material PLA. El precio es por unidad."
+        imagenes: [
+            "img/miguel lanus1.jpg",
+            "img/miguel lanus2.jpg",
+            "img/miguel lanus3.jpg"
+        ],
+        descripcion: `Terreno en Zona Universitaria Campus UNaM - Misiones.
+Oportunidad única para inversionistas y constructores.
+Se vende terreno en zona universitaria de Posadas, Misiones, a minutos del centro.
+Ubicación privilegiada Zona Miguel Lanús.
+Escuela de Cadetes de la Policía.
+Acceso Sur y Playa Costa Sur.
+Cercanía al Hospital y Juzgado.
+Zona de alta demanda y crecimiento.
+Terreno de 10x40m apto para construcción.
+Servicios básicos disponibles (agua, electricidad, red cloacal).
+Acceso fácil y seguro.
+Oportunidad de inversión,
+ideal viviendas unifamiliares o departamentos para alquiler.
+Desarrollar un proyecto comercial o de servicios.
+Zona con alto potencial de crecimiento.`
     },
+
     {
-        nombre: "Portajoystick de God of War/ Goku",
-        oferta: true,
-        categoria: "Gamer",
-        precio: 22000,
-        unidades: 1,
-        imagen: "img/PJ3500.jpg",
-        descripcion: "Portajoystick o celular de God of War y Goku, impresos con material PLA. El precio es por unidad."
+        nombre: "Vivienda Familiar Barrio Judicial",
+        localizacion: "Posadas",
+        categoria: "Casas",
+        precio: 100000,
+        imagenes: [
+            "img/barrio judicial1.jpg",
+            "img/barrio judicial2.jpg",
+            "img/barrio judicial3.jpg"
+        ],
+        descripcion:
+`Esta impresionante residencia moderna combina el lujo con la comodidad, ofreciéndote el hogar perfecto que siempre deseaste.
+Disfruta de cada día en esta hermosa casa, con una hermosa piscina para relajarte y refrescarte en los días calurosos.
+Ubicada en plena ciudad, tendrás todo lo que necesitas a tu alcance.
+Barrio judicial. Monseñor de Andrea & Centenario.
+Medidas 10x25m.<Br>    
+• 4 habitaciones 
+• Living 
+• Cocina 
+• Comedor 
+• Lavadero 
+• Garage con techo 
+• Hall de Entrada
+• Patio abierto con parrilla y pileta 
+• Entrada cerrado con portón eléctrico 
+• Termotanque`
     },
+
     {
-        nombre: "Portajoystick de Mano de Hevy Metal",
-        oferta: true,
-        categoria: "Gamer",
-        precio: 9000,
-        unidades: 1,
-        imagen: "img/PJ2000.jpg",
-        descripcion: "Portajoystick o celular de Mano de Hevy Metal, impreso con material PLA. El precio es por unidad."
+        nombre: "Casa Villa Cabello. Av. López y Planes & Ramón Ayala.",
+        localizacion: "Posadas",
+        categoria: "Casas",
+        precio: 87000,
+        imagenes: [
+            "img/villa cabello1.jpg",
+            "img/villa cabello2.jpg",
+            "img/villa cabello3.jpg"
+        ],
+        descripcion:
+`Ubicación: Av. López y Planes & Ramón Ayala, zona Villa Cabello.<br>
+Características Principales:<br>
+•Dormitorios: 3
+•Baños: 2
+•Cocheras: 1
+•Antigüedad: A estrenar
+•Expensas: $0 <br>
+Superficies y Medidas:
+•Frente: 11.30 m
+•Fondo: 20 m<br>
+Descripción:<br>
+•Amplio y luminoso living/comedor
+•Acogedor estar con cocina a leña
+•Lavadero independiente
+•Cocina espaciosa
+•Patio con césped y parrilla
+•Habitación extra con baño en el patio
+•Garaje incluido<br>
+Importante: No se aceptan permutas.`
     },
+
     {
-        nombre: "Porta auricular de Batman",
-        oferta: true,
-        categoria: "Gamer",
-        precio: 17500,
-        unidades: 1,
-        imagen: "img/batman.jpg",
-        descripcion: "Porta auricular del modelo de Batman, impreso con material PLA."
+        nombre: "Departamento Villa Cabello. Chacra 149.",
+        localizacion: "Posadas",
+        categoria: "Departamentos",
+        precio: 40000,
+        imagenes: [
+            "img/ch149 1.jpg",
+            "img/ch149 2.jpg",
+            "img/ch149 3.jpg"
+        ],
+        descripcion:
+`📍 Ubicación: Chacra 149, 2do piso, Villa Cabello<br>
+
+Características principales:<br>
+
+• 3 Habitaciones (¡2 con Aire Acondicionado! )
+• Sala Comedor 
+• Cocina 
+• Lavadero 
+• Balcón cerrado al frente 
+• Ampliación de patio trasero de 6x9 m.
+• Parrilla para asados <br>
+Servicios:<br>
+• Agua Corriente 
+• Electricidad 
+• Pavimento <br>
+Descripción:<br>
+• Cocina
+• Comedor 
+• Lavadero 
+• Living <br>
+Este departamento es perfecto para quienes buscan comodidad y un buen espacio en un lugar estratégico de Villa Cabello. `
     },
+
     {
-        nombre: "Porta PS VITA",
-        oferta: false,
-        categoria: "Gamer",
-        precio: 5000,
-        unidades: 1,
-        imagen: "img/psvita.jpg",
-        descripcion: "Porta consola PS vita, impreso con material PLA. El precio es por unidad."
+        nombre: "Casa en venta Av. Centenario y Monseñor de Andrea",
+        localizacion: "Posadas",
+        categoria: "Casas",
+        precio: 74000,
+        imagenes: [
+            "img/Centenario y Monseñor de Andrea1.jpg",
+            "img/Centenario y Monseñor de Andrea2.jpg",
+            "img/Centenario y Monseñor de Andrea3.jpg"
+        ],
+        descripcion:
+`Características Principales: <br>
+• Dormitorios: 2 
+• Baños: 2 (¡Uno con hidromasajes!)
+• Antigüedad: A Estrenar 
+• Expensas: $0 
+• Superficies y Medidas: Frente: 8 m Fondo: 16 m <br>
+Descripción: <br>
+Esta excelente propiedad en venta se encuentra en una ubicación estratégica en Posadas, en el Barrio Mangal. La casa cuenta con:
+2 Habitaciones cómodas 
+2 Baños modernos, uno con hidromasajes 
+• Amplio living para disfrutar en familia 
+• Comedor luminoso 
+• Cocina equipada 
+• Garage para tu vehículo 
+• Patio con parrilla ideal para asados 
+• Pileta para refrescarte en verano <br>
+Servicios: <br>
+• Agua Corriente 
+• Cloaca 
+• Electricidad 
+• Pavimento <br>
+Ambientes: <br>
+• Cocina 
+• Comedor 
+• Jardín 
+• Lavadero 
+• Living 
+• Patio <br>
+ Adicionales: <br>
+• Parrilla para tus asados 
+• Apto para mascotas 
+• Pileta 
+• Lavadero independiente 
+Esta propiedad es perfecta para quienes buscan comodidad, modernidad, y un excelente espacio al aire libre. `
     },
+
+
     {
-        nombre: "Porta CD PS5",
-        oferta: false,
-        categoria: "Gamer",
-        precio: 5000,
-        unidades: 1,
-        imagen: "img/PS5 cd.jpg",
-        descripcion: "Porta CD de consola PS5, impreso con material PLA. El precio es por unidad."
+        nombre: "Departamento en Altos de Posadas",
+        localizacion: "Posadas",
+        categoria: "Departamentos",
+        precio: 165000,
+        imagenes: [
+            "img/altos de posadas1.jpg",
+            "img/altos de posadas2.jpg",
+            "img/altos de posadas3.jpg"
+        ],
+        descripcion: `Centro de Posadas. Esquina 25 de Mayo y Belgrano. 2 habitaciones. Cochera. Primer nivel piso 10. Vista increíble al río Paraná.
+        Ofrecemos un hermoso departamento céntrico con balcón y vista impresionante al río Paraná 
+Disfruta de la tranquilidad y la belleza natural desde tu propio hogar 
+• Ubicación céntrica, a pocos pasos de comercios, restaurantes y servicios
+• Departamento amplio y luminoso con 2 dormitorios y 2 baños
+• Balcón con vista panorámica al río Paraná
+• Cocina amoblada
+• Sala de estar con amplias ventanas y vista al río
+• Seguridad 24 horas y estacionamiento privado
+ No te pierdas la oportunidad de vivir en un lugar único y exclusivo.`
     },
+
     {
-        nombre: "Llaveros de personajes",
-        oferta: false,
-        categoria: "Llaveros",
-        precio: 3000,
-        unidades: 1,
-        imagen: "img/llaveros personajes.jpg",
-        descripcion: "Llaveros de personajes, impresos con material PLA y pintados a mano. El precio es por unidad."
+        nombre: "Estacionamiento y Depósito sobre Av.Uruguay",
+        localizacion: "Posadas",
+        categoria: "Casas",
+        precio: 87000,
+        imagenes: [
+            "img/EstacionamientoUruguay1.jpg",
+            "img/EstacionamientoUruguay2.jpg",
+            "img/EstacionamientoUruguay3.jpg"
+        ],
+        descripcion: `Características Principales: <br>
+Terreno: 255 m² (17m de frente x 15m de fondo)
+Superficie total construida: 100 m² (70 m² en planta baja y 30 m² en 1er piso) <br>
+• Estacionamiento para varios autos 
+• Portón de acceso nuevo 
+• Depósito con local 
+• Techo y termotanque nuevos 
+• Baño recién remodelado 
+• Pintura reciente <br>
+Servicios: 
+• Agua Corriente 
+• Electricidad 
+• Pavimento <br>
+Este galpón es ideal para quienes buscan un espacio multifuncional, perfecto como estacionamiento o depósito. ¡Listo para usar con todo renovado!.`
     },
+
     {
-        nombre: "Llaveros de Flork",
-        oferta: false,
-        categoria: "Llaveros",
-        precio: 9500,
-        unidades: 10,
-        imagen: "img/flork.jpg",
-        descripcion: "Llaveros Flork de distintos modelos, 5 cm de largo aproximadamente, impresos con material PLA. El precio es por 10 unidades."
+        nombre: "Departamento Villa Cabello CH149",
+        localizacion: "Posadas",
+        categoria: "Departamento",
+        precio: 42000,
+        imagenes: [
+            "img/Chacra 149 Eva Peron 1.jpg",
+            "img/Chacra 149 Eva Peron 2.jpg",
+            "img/Chacra 149 Eva Peron 3.jpg"
+        ],
+        descripcion: `Departamento en Venta en Villa Cabello, Posadas <br>
+Ubicación: Chacra 149 sobre Eva Perón, 1° Piso en Esquina <br>
+Características Principales: <br>
+• Antigüedad: A estrenar 
+• Expensas: $0 
+Descripción: Excelente departamento en Villa Cabello se encuentra en un 1° piso, ideal para quienes buscan comodidad y accesibilidad. La propiedad cuenta con:
+• Sala/comedor amplio y luminoso 
+• Cocina equipada con extractor 
+• 3 habitaciones, una de ellas con vestidor
+• Baños: 1 <br>
+Servicios: 
+• Agua Corriente 
+• Cloaca 
+• Electricidad
+• Pavimento.`
     },
+    
     {
-        nombre: "Llaveros de equipos",
-        oferta: false,
-        categoria: "Llaveros",
-        precio: 10000,
-        unidades: 10,
-        imagen: "img/equipos.jpg",
-        descripcion: "Llaveros de distintos equipos, impresos con material PLA. El precio es por 10 unidades."
+        nombre: "Casa en Santa Helena",
+        localizacion: "Garupá",
+        categoria: "Casas",
+        precio: 46500,
+        imagenes: [
+            "img/helena 1.jpg",
+            "img/helena 2.jpg",
+            "img/helena 3.jpg"
+        ],
+        descripcion: ` ¡Excelente Oportunidad en Santa Helena! <br>
+Dirección: Calle Chivato Casa 13, Mz 38 <br>
+
+Si estás buscando tu nuevo hogar, ¡esta es la opción perfecta para vos! <br>
+
+Características principales: <br>
+
+Dormitorios: 3 (¡uno con placard incluido!) <br>
+Baños: 1 baño completo con ducha eléctrica <br>
+Antigüedad: A estrenar <br>
+Expensas: $0 <br>
+Medidas: Frente: 10.30 m, ondo: 25 m<br>
+Descripción: <br>
+Esta hermosa casa cuenta con una cocina y living comedor integrados, ideal para disfrutar de los momentos en familia. Las aberturas tienen rejas para mayor seguridad. Además, posee un patio delantero y otro trasero, perfecto para disfrutar del aire libre.
+Garaje cubierto para 1 vehículo
+Entrada adicional para 2 vehículos <br>
+Servicios:
+• Agua corriente
+• Cloacas
+• Electricidad
+• Pavimento <br>
+Ambientes:
+• Cocina
+• Comedor
+• Lavadero
+• Living
+• Patio <br>
+¡No te pierdas esta oportunidad única de mudarte a Santa Helena!`
     },
+
     {
-        nombre: "Llaveros de autodefensa",
-        oferta: false,
-        categoria: "Llaveros",
-        precio: 8500,
-        unidades: 5,
-        imagen: "img/llavero gato.jpg",
-        descripcion: "Llaveros de autodefensa con forma de gatos, impresos con material PLA. El precio es por 5 unidades."
+        nombre: "Casa en Posadas",
+        localizacion: "Posadas",
+        categoria: "Casas",
+        precio: 57000,
+        imagenes: [
+            "img/Jauretche 1.jpg",
+            "img/Jauretche 2.jpg",
+            "img/Jauretche 3.jpg"
+        ],
+        descripcion: ` Venta de Casa en Posadas <br>
+Ubicación: Jauretche y Av. Andresito <br>
+
+¡No dejes pasar esta increíble oportunidad de estrenar tu casa en una de las mejores zonas de Posadas! <br>
+
+Características Principales: <br>
+
+Dormitorios: 3 <br>
+Baños: 2 <br>
+Antigüedad: A estrenar <br>
+Expensas: $0 <br>
+Descripción:
+• Esta propiedad cuenta con todo lo necesario para una vida cómoda y tranquila. Disfrutá de amplios espacios que incluyen: <br>
+• Una sala de estar para relajarte
+• Cocina moderna
+• Living espacioso
+• Comedor integrado
+• Patio para momentos al aire libre
+• Piscina para refrescarte en verano <br>
+Ideal para familias que buscan confort y una excelente ubicación en Posadas!`
     },
+
     {
-        nombre: "Llaveros personalizados",
-        oferta: false,
-        categoria: "Llaveros",
-        precio: 27500,
-        unidades: 20,
-        imagen: "img/llpe.jpg",
-        descripcion: "Llaveros personalizados en dos colores, impresos con material PLA. El precio es por 20 unidades."
+        nombre: "Terreno Miguel Lanus en esquina",
+        localizacion: "Posadas",
+        categoria: "Terrenos",
+        precio: 14000,
+        imagenes: [
+            "img/pipo y montoya 1.jpg",
+            "img/pipo y montoya 2.jpg",
+
+        ],
+        descripcion: `TERRENO EN VENTA EN ESQUINA - Miguel Lanús Calle Santo Pipó y Ruiz de Montoya. IDEAL PARA CONSTRUÍR  DEPARTAMENTOS PARA ALQUILAR <Br>
+Antigüedad: A Estrenar<Br>
+Expensas: $0<Br>
+
+Superficies y Medidas<Br>
+• Terreno: 360 m²
+• Frente: 10 m
+• Fondo: 36 m <Br>
+Descripción <Br>
+¿Estás buscando el terreno perfecto para construir tu casa? ¡Lo tenemos! Este amplio terreno en esquina te ofrece una ubicación ideal con servicios de agua corriente y electricidad ya disponibles.<Br>
+
+Para más información, comunícate con nosotros. ¡No dejes pasar esta oportunidad!`
     },
+
     {
-        nombre: "Llaveros animales porta celulares",
-        oferta: false,
-        categoria: "Llaveros",
-        precio: 4500,
-        unidades: 5,
-        imagen: "img/llaveros animales.jpg",
-        descripcion: "Llaveros de animales porta celulares, impresos con material PLA. El precio es por 5 unidades."
+        nombre: "Terreno en Av. Cocomarola y Cabo de Hornos",
+        localizacion: "Posadas",
+        categoria: "Terrenos",
+        precio: 19000,
+        imagenes: [
+            "img/cocomarola 1.jpg",
+            "img/cocomarola 2.jpg",
+            "img/cocomarola 3.jpg",
+        ],
+        descripcion: `LOTE EN VENTA NIVELADO Y CON SUELO FIRME<Br>
+Antigüedad: A Estrenar<Br>
+Expensas: $0<Br>
+
+Superficies y Medidas<Br>
+• Frente: 11.75 m
+• Fondo: 35.56 m<Br>
+Descripción<Br>
+¡Oportunidad! Terreno en esquina, nivelado y suelo firme de tierra colorada. Perfecto para quienes buscan una base sólida para construir.<Br>
+
+Cuenta con:<Br>
+
+• Alumbrado público
+• Agua potable
+• Calle empedrada
+• Ubicación conveniente, con acceso a colectivos, supermercados y a tan solo 20 minutos del centro.<Br>
+
+Servicios disponibles:<Br>
+
+• Agua corriente
+• Electricidad<Br>
+`
     },
+
     {
-        nombre: "Set para cocina de Bob esponja",
-        oferta: true,
-        categoria: "Cocina",
-        precio: 12500,
-        unidades: 2,
-        imagen: "img/otros.jpg",
-        descripcion: "Porta esponja de Bob esponja y Porta virulana de Patricio estrella. El precio es por el set."
+        nombre: "Terreno con cabaña en Santa Inés",
+        localizacion: "Garupá",
+        categoria: "Casas",
+        precio: 32000,
+        imagenes: [
+            "img/chogui1.jpg",
+            "img/chogui2.jpg",
+            "img/chogui3.jpg",
+        ],
+        descripcion: `Este lote de 15x40 metros te ofrece la oportunidad ideal de inversión. 
+        Cuenta con una perforación de 100 metros y un sistema automático de bombeo ya instalado,
+         garantizando un acceso eficiente al agua. Además, la propiedad incluye una excelente cabaña de madera de 35m² 
+         lista para habitar, perfecta para quienes buscan tranquilidad o una vivienda lista para expandir.
+          El servicio de luz monofásica está en pleno funcionamiento. Es un lugar ideal
+          para descansar, a tan solo 20 minutos de Posadas ¡No dejes pasar esta excelente 
+          oportunidad!`
     },
-    {
-        nombre: "Porta esponja de Homero Simpson",
-        oferta: true,
-        categoria: "Cocina",
-        precio: 5500,
-        unidades: 1,
-        imagen: "img/homero esponja.jpg",
-        descripcion: "Porta esponja versión Homero arbusto. El precio es por unidad."
-    },
-    {
-        nombre: "Cortadores de Mario",
-        oferta: false,
-        categoria: "Cocina",
-        precio: 4000,
-        unidades: 3,
-        imagen: "img/cortador mario.jpg",
-        descripcion: "Cortadores de Mario, impresos con material PLA, de 8,5 cm x 8,5 cm aproximadamente. El precio es por los tres modelos."
-    },
-    {
-        nombre: "Cortadores navideños",
-        oferta: false,
-        categoria: "Cocina",
-        precio: 3500,
-        unidades: 4,
-        imagen: "img/cortantes navideños.jpg",
-        descripcion: "Cortadores navideños, impresos con material PLA, de entre 8 y 12 cm de largo aproximadamente. El precio es por los cuatro modelos."
-    },
-    {
-        nombre: "Clip para bolsas",
-        oferta: false,
-        categoria: "Cocina",
-        precio: 6000,
-        unidades: 2,
-        imagen: "img/clip bolsa.jpg",
-        descripcion: "Clip para bolsas con tapa a rosca, impreso con material PLA. El precio es por dos unidades."
-    },
-    {
-        nombre: "Accesorios para latas",
-        oferta: true,
-        categoria: "Cocina",
-        precio: 16500,
-        unidades: 1,
-        imagen: "img/latas.jpg",
-        descripcion: "Porta latas para almacenar en el refrigerador con capacidad para cinco latas de 473 cc. El precio es por unidad."
-    },
-    {
-        nombre: "Porta latas de cerveza",
-        oferta: true,
-        categoria: "Cocina",
-        precio: 5500,
-        unidades: 1,
-        imagen: "img/vaso de barril.jpg",
-        descripcion: "Porta latas para latas de 473 cc. El precio es por unidad."
-    },
-    {
-        nombre: "Cuchara para revolver tragos",
-        oferta: false,
-        categoria: "Cocina",
-        precio: 10000,
-        unidades: 12,
-        imagen: "img/revolvedor.jpg",
-        descripcion: "Revolvedor de tragos fríos personalizados, 18 cm de largo. Fabricados a partir de 12 unidades. El precio es por 12 unidades."
-    },
-    {
-        nombre: "Prensa para celulares",
-        oferta: false,
-        categoria: "Herramientas",
-        precio: 11000,
-        unidades: 6,
-        imagen: "img/prensa.jpg",
-        descripcion: "Prensa pequeña para reparación de celulares. El precio es por 6 unidades."
-    },
-    {
-        nombre: "Soporte para casco con llavero",
-        oferta: false,
-        categoria: "Herramientas",
-        precio: 4000,
-        unidades: 1,
-        imagen: "img/casco.jpg",
-        descripcion: "Soporte de pared para casco de moto con llavero incluido. El precio es por unidad."
-    },
-    {
-        nombre: "Jabonera y porta cepillos",
-        oferta: true,
-        categoria: "Baño",
-        precio: 8500,
-        unidades: 1,
-        imagen: "img/jabonera.jpg",
-        descripcion: "Jabonera y porta cepillos para el baño, impreso con material PLA, disponible en color blanco."
-    },
-    {
-        nombre: "Porta cepillos y vomitador de pasta dental de Star Wars",
-        oferta: true,
-        categoria: "Baño",
-        precio: 8500,
-        unidades: 2,
-        imagen: "img/cepillo.jpg",
-        descripcion: "Porta cepillo de 6 cm de altura y vomitador de pasta dental versión Star Wars, impreso con material PLA."
-    },
-    {
-        nombre: "Porta bolsas para mascotas",
-        oferta: false,
-        categoria: "Mascotas",
-        precio: 3000,
-        unidades: 1,
-        imagen: "img/portabolsa.jpg",
-        descripcion: "Porta bolsas para desechos de mascotas, ideales para la hora de pasearlos."
-    },
-    {
-        nombre: "Chapitas para mascotas",
-        oferta: false,
-        categoria: "Mascotas",
-        precio: 3500,
-        unidades: 1,
-        imagen: "img/huesitos.jpg",
-        descripcion: "Chapitas para mascotas, con el nombre delante y el número telefónico por detrás, impresos con material PLA en dos colores. El precio es por unidad."
-    },
-    {
-        nombre: "Porta espiral Dr. Strange",
-        oferta: true,
-        categoria: "Otros",
-        precio: 8500,
-        unidades: 1,
-        imagen: "img/portaespiral.jpg",
-        descripcion: "Porta espiral Dr. Strange, de 15 cm de altura. El precio es por unidad."
-    },
-    {
-        nombre: "Billetera/ tarjetero",
-        oferta: false,
-        categoria: "Otros",
-        precio: 7000,
-        unidades: 1,
-        imagen: "img/billetera.png",
-        descripcion: "Billetera/ tarjetero personalizable en color e iniciales. El precio es por unidad."
-    },
-    {
-        nombre: "Soporte para computadoras portatiles netbook (15 pulgadas)",
-        oferta: true,
-        categoria: "Otros",
-        precio: 14500,
-        unidades: 1,
-        imagen: "img/soporte notebook.jpg",
-        descripcion: "Disponibles para notebook y netbook. El precio es por unidad."
-    },
-    {
-        nombre: "Soporte para computadoras portatiles notebook (17 pulgadas)",
-        oferta: false,
-        categoria: "Otros",
-        precio: 17000,
-        unidades: 1,
-        imagen: "img/soporte notebook.jpg",
-        descripcion: "Disponibles para notebook y netbook. El precio es por unidad."
-    },
-    {
-        nombre: "Soporte para celular o tablet",
-        oferta: false,
-        categoria: "Otros",
-        precio: 4000,
-        unidades: 1,
-        imagen: "img/soporte celular.jpg",
-        descripcion: "Soportes personalizados en distintos colores, los cuales se pueden regular el ángulo de inclinación y sirven tanto para tablet como para celular. El precio es por unidad."
-    },
-    {
-        nombre: "Porta maquillajes",
-        oferta: true,
-        categoria: "Otros",
-        precio: 6000,
-        unidades: 1,
-        imagen: "img/portamaquillaje.jpg",
-        descripcion: "Porta maquillajes de 15 cm de largo, disponibles en blanco, rosa y negro. El precio es por unidad."
-    },
-    {
-        nombre: "Flauta dulce con forma de dragón",
-        oferta: true,
-        categoria: "Otros",
-        precio: 8000,
-        unidades: 1,
-        imagen: "img/flauta dragon.jpg",
-        descripcion: "Flauta dulce con forma de dragón, impresa con material PLA, disponible en varios colores. El precio es por unidad."
-    },
-    {
-        nombre: "Posavasos personalizados",
-        oferta: false,
-        categoria: "Otros",
-        precio: 5000,
-        unidades: 1,
-        imagen: "img/posavaso.jpg",
-        descripcion: "Posavaso personalizado en dos colores, con tu nombre o logo favorito. El precio es por unidad."
-    },
-    {
-        nombre: "Porta pelota de tenis",
-        oferta: false,
-        categoria: "Otros",
-        precio: 3000,
-        unidades: 1,
-        imagen: "img/porta pelota.jpg",
-        descripcion: "Porta pelota de tenis, impreso con material PLA. El precio es por unidad."
-    },
+    
 ];
 
-const listaProductos = document.getElementById("lista-productos");
+const listaPropiedades = document.getElementById("lista-propiedades");
 const categoriaFiltro = document.getElementById("categoria");
 const precioFiltro = document.getElementById("precio");
-const ofertaFiltro = document.getElementById("oferta");
+const localizacionFiltro = document.getElementById("localizacion");
 
-categoriaFiltro.addEventListener("change", mostrarProductos);
-precioFiltro.addEventListener("change", mostrarProductos);
-ofertaFiltro.addEventListener("change", mostrarProductos);
+// Función para mostrar las propiedades basadas en los filtros aplicados
+function mostrarPropiedades() {
+    let propiedadesFiltradas = propiedades;
 
-function mostrarProductos() {
-    let productosFiltrados = productos;
-
-    // Aplicar filtros adicionales (categoria y precio)
+    // Filtrar por categoría
     if (categoriaFiltro.value) {
-        productosFiltrados = productosFiltrados.filter(producto => producto.categoria === categoriaFiltro.value);
+        propiedadesFiltradas = propiedadesFiltradas.filter(prop => prop.categoria === categoriaFiltro.value);
     }
 
-    if (precioFiltro.value) {
-        productosFiltrados = productosFiltrados.filter(producto => producto.precio <= parseInt(precioFiltro.value));
+    // Filtrar por localización
+    if (localizacionFiltro.value) {
+        propiedadesFiltradas = propiedadesFiltradas.filter(prop => prop.localizacion === localizacionFiltro.value);
     }
 
-    // Aplicar filtro de oferta
-    if (ofertaFiltro.value === "true") {
-        productosFiltrados = productosFiltrados.filter(producto => producto.oferta === true);
+    // Filtrar por precio
+    const precioMaximo = parseInt(precioFiltro.value);
+    if (!isNaN(precioMaximo)) {
+        propiedadesFiltradas = propiedadesFiltradas.filter(prop => prop.precio <= precioMaximo);
     }
 
+    // Limpiar lista de propiedades y agregar las filtradas
+    listaPropiedades.innerHTML = "";
+    propiedadesFiltradas.forEach((prop, index) => {
+        const propiedadDiv = document.createElement("div");
+        propiedadDiv.classList.add("propiedad");
 
-    listaProductos.innerHTML = "";
-    productosFiltrados.forEach((producto) => {
-        const idProducto = producto.nombre.replace(/\s/g, "-");
+        // Crear un contenedor para las imágenes
+        const imagenesDiv = document.createElement("div");
+        imagenesDiv.classList.add("imagenes");
+        prop.imagenes.forEach(imgSrc => {
+            const img = document.createElement("img");
+            img.src = imgSrc;
+            img.alt = prop.nombre;
+            img.style.width = "100%"; // Ajusta el estilo según sea necesario
+            imagenesDiv.appendChild(img);
+        });
 
-        // Crear el elemento de la división
-        const division = document.createElement("div");
-        division.classList.add("producto");
-        division.id = idProducto;
-        // Verificar si el producto está en oferta
-        if (producto.oferta) {
-            // Mostrar información del producto en oferta
-            const precioactual = producto.precio * 0.95;
-            const productoHTML = `
-        <div class="producto" id=${idProducto}>
-        <img src="${producto.imagen}" alt="${producto.nombre}" style="width: 100%;">
-        <h4>EN OFERTA HASTA AGOTAR STOCK!</h4>
-            <h3>${producto.nombre}</h3>
-            <button class="agregar-carrito" data-nombre="${producto.nombre}" data-precio="${precioactual}">Agregar a la lista de consulta</button>
-            <p class="precio"><del>$${producto.precio}</del> $${precioactual} x ${producto.unidades} ud.</p>
-        </div>
-    `;
-
-            division.innerHTML += productoHTML;
-        } else {
-            // Mostrar información del producto sin oferta
-            const precioactual = producto.precio;
-            const productoHTML = `
-            <div class="producto" id=${idProducto}>
-            <img src="${producto.imagen}" alt="${producto.nombre}" style="width: 100%;">
-                <h3>${producto.nombre}</h3>
-                <button class="agregar-carrito" data-nombre="${producto.nombre}" data-precio="${precioactual}">Agregar a la lista de consulta</button>
-                <p class="precio">$${precioactual} x ${producto.unidades} ud.</p>
-            </div>
+        propiedadDiv.innerHTML = `
+            <h3>${prop.nombre}</h3>
+            <p>Precio: U$D ${prop.precio}</p>
+            <p>Categoria: ${prop.categoria}</p>
+            <p>Localización: ${prop.localizacion}</p>
+            <p>${prop.descripcion}</p>
+            <button id="btnWhatsapp-${index}" class="btn-whatsapp">Agenda tu visita</button>
         `;
-            division.innerHTML += productoHTML;
-        }
 
-        // Obtener el contenido de la división sin la ID
-        const contenidoHTML = division.innerHTML
+        // Agregar el contenedor de imágenes a la propiedad
+        propiedadDiv.appendChild(imagenesDiv);
 
+        // Agregar la propiedad al contenedor principal
+        listaPropiedades.appendChild(propiedadDiv);
 
-        // Crear el contenido de la división
-        const contenido = document.createElement("div");
-        contenido.classList.add("contenido");
-        contenido.innerHTML = `
-        <div class="subcontenido">
-  ${contenidoHTML}<div class="producto">
-    <p class="descripcion">${producto.descripcion}</p>
-    <button id="urlproducto-${idProducto}" data-url="${idProducto}">Copiar enlace del Producto</button>
-    <br></br>
-    <button class="cerrar" data-id="${idProducto}">Volver</button>
-  </div>
-</div>
-`;
-
-
-        // Agregar evento de clic para mostrar/ocultar la división como ventana
-        division.addEventListener("click", function (event) {
-            // Verificar si el botón fue el elemento que recibió el clic
-            if (event.target.classList.contains("agregar-carrito")) {
-                return; // No hacer nada si fue el botón
-            }
-
-            contenido.style.display = "block";
-            document.documentElement.style.overflow = 'hidden';
-        });
-
-        // Agregar evento de clic para mostrar/ocultar la división como ventana
-division.addEventListener("click", function (event) {
-    // Verificar si el botón fue el elemento que recibió el clic
-    if (event.target.classList.contains("agregar-carrito")) {
-        return; // No hacer nada si fue el botón
-    }
-
-    contenido.style.display = "block";
-    document.documentElement.style.overflow = 'hidden';
-    history.pushState({ modalOpen: true }, null, window.location.href); // Empuja un nuevo estado al historial
-});
-
-// Agregar evento de clic al botón de cierre para ocultar la división
-const cerrar = contenido.querySelector(".cerrar");
-cerrar.addEventListener("click", function (event) {
-    event.stopPropagation();
-    contenido.style.display = "none";
-    document.documentElement.style.overflow = 'auto';
-    history.back(); // Retrocede en el historial
-});
-
-// Agregar evento para detectar cuando el usuario presiona el botón de volver del navegador
-window.addEventListener("popstate", function (event) {
-    if (contenido.style.display === "block") {
-        contenido.style.display = "none";
-        document.documentElement.style.overflow = 'auto';
-    }
-});
-
-// Agregar el contenido a la división
-division.appendChild(contenido);
-
-// Agregar la división al contenedor principal
-listaProductos.appendChild(division);
-
-    });
-
-
-
-    const agregarBotones = document.querySelectorAll('.agregar-carrito');
-
-    agregarBotones.forEach((boton) => {
-        boton.addEventListener('click', () => {
-            const nombre = boton.dataset.nombre;
-            const precio = Number(boton.dataset.precio);
-            const producto = { nombre, precio };
-            productosSeleccionados.push(producto);
-            mostrarCarrito();
-            alert("Agregado a la lista para consultar stock");
+        // Añadir evento al botón de WhatsApp
+        const btnWhatsapp = document.getElementById(`btnWhatsapp-${index}`);
+        btnWhatsapp.addEventListener('click', () => {
+            const mensaje = `Hola Vanesa, quisiera agendar una visita de la propiedad ${prop.nombre}`;
+            const telefono = '3765383612'; // Número de teléfono de destino
+            const url = `https://api.whatsapp.com/send?phone=${telefono}&text=${encodeURIComponent(mensaje)}`;
+            window.open(url);
         });
     });
+}
 
+// Agregar event listeners a los filtros
+categoriaFiltro.addEventListener("change", mostrarPropiedades);
+localizacionFiltro.addEventListener("change", mostrarPropiedades);
+precioFiltro.addEventListener("input", mostrarPropiedades);
 
-    const btnURLProductos = document.querySelectorAll('[id^="urlproducto-"]');
+// Mostrar todas las propiedades al cargar la página
+mostrarPropiedades();
 
-    btnURLProductos.forEach((btnURLProducto) => {
-        btnURLProducto.addEventListener('click', () => {
-            const idProducto = btnURLProducto.dataset.url;
-            const currentURL = window.location.href;
-            const hasID = currentURL.includes('#');
+const construcciones = [
+    {
+        nombre: "Cabaña de Eucalipto",
+        descripcion: `Base: Pilotes de hormigon de cemento, hierros , ripio y arena.
+ Cabañero Machimbre de Pino o Eucalipto.
+Frente inglés o cabañero de 1 pulgada. 
+Primera calidad.
+Estructura de la casa de tirantes de 2x3/2x4/2x5.
+Baño: piso de madera con alfombra de vinilo y pared de PVC hasta altura de 2.40m.
+Cocina, Sala comedor.
+Cielorraso a la vista.
+Techo de chapa y aislantes térmicos.
+Puertas de madera.
+Ventanas 1x1 madera/aluminio. 
+Instalación de luz completa. 
+Instalación de agua fría y caliente.
 
-            let url;
-            if (hasID) {
-                url = `${currentURL.substring(0, currentURL.indexOf('#'))}#${idProducto}`;
-            } else {
-                url = `${currentURL}#${idProducto}`;
-            }
+`,
+        precioPorMetroCuadrado: 550,
+        imagenes: [
+            "img/cabaña eucalipto1.jpg",
+            "img/cabaña eucalipto2.jpg",
+            "img/cabaña eucalipto3.jpg"
+        ]
+    },
 
-            copiarURL(url);
-            mostrarAlerta();
+    {
+        nombre: "Cabaña de Quebracho Blanco",
+        descripcion: `
+
+        
+Quebracho blanco base de hormigón o durmientes de quebracho. Estructura de pared de 20cm de ancho, 10cm de espesor y 2.70-2.40m de largo. 
+Techo a la vista recubierto de machimbre aislante y chapa de cinc. Baño con ladrillos y reboque, cerámica, inodoro con mochila de descarga, bided. 
+Mesada con pileta lavatorio, canillas frio calor, ducha con perillas frio calor. Ventana a elección del cliente de madera o aluminio.
+
+`,
+        precioPorMetroCuadrado: 670,
+        imagenes: [
+            "img/quebracho1.jpg",
+            "img/quebracho2.jpg",
+            "img/quebracho3.jpg"
+        ]
+    },
+
+    {
+        nombre: "Cabaña de Tronco de Eucalipto",
+        descripcion: `Cabaña de tronco. Pilote de cemento, tirantes 2x6, piso flotante de machimbre.
+        Construcción desde la base.
+Frente inglés o cabañero de 1 pulgada. 
+Primera calidad.
+Baño con ladrillo revocado y cerámica. Todos los artefactos.
+Cocina, Sala comedor.
+Cielorraso a la vista.
+Techo de chapa y aislantes térmicos.
+Puertas de madera.
+Ventanas 1*1 madera/aluminio. 
+Instalación de luz completa. 
+Instalación de agua fría y caliente.
+
+`,
+        precioPorMetroCuadrado: 630,
+        imagenes: [
+            "img/tronco1.jpg",
+            "img/tronco2.jpg",
+            "img/tronco3.jpg"
+        ]
+    },
+
+];
+
+const listaConstruccion = document.getElementById("lista-construccion");
+
+function mostrarConstrucciones() {
+    listaConstruccion.innerHTML = "";
+    construcciones.forEach((construccion, index) => {
+        const construccionDiv = document.createElement("div");
+        construccionDiv.classList.add("construccion");
+
+        // Crear un contenedor para las imágenes
+        const imagenesDiv = document.createElement("div");
+        imagenesDiv.classList.add("imagenes");
+        construccion.imagenes.forEach(imgSrc => {
+            const img = document.createElement("img");
+            img.src = imgSrc;
+            img.alt = construccion.nombre;
+            img.style.width = "100%"; // Ajusta el estilo según sea necesario
+            imagenesDiv.appendChild(img);
+        });
+
+        construccionDiv.innerHTML = `
+            <h3>${construccion.nombre}</h3>
+            <p>${construccion.descripcion}</p>
+            <p>Precio por m²: U$D ${construccion.precioPorMetroCuadrado}</p>
+            <button id="btnWhatsappConstruccion-${index}" class="btn-whatsapp">Solicitar presupuesto</button>
+        `;
+
+        // Agregar el contenedor de imágenes a la construcción
+        construccionDiv.appendChild(imagenesDiv);
+
+        // Agregar la construcción al contenedor principal
+        listaConstruccion.appendChild(construccionDiv);
+
+        // Añadir evento al botón de WhatsApp
+        const btnWhatsapp = document.getElementById(`btnWhatsappConstruccion-${index}`);
+        btnWhatsapp.addEventListener('click', () => {
+            const mensaje = `Hola, quisiera presupuesto de ${construccion.nombre}`;
+            const telefono = '3765383612'; // Número de teléfono de destino
+            const url = `https://api.whatsapp.com/send?phone=${telefono}&text=${encodeURIComponent(mensaje)}`;
+            window.open(url);
         });
     });
-
-    function copiarURL(url) {
-        const elementoTemp = document.createElement('input');
-        elementoTemp.value = url;
-        document.body.appendChild(elementoTemp);
-        elementoTemp.select();
-        document.execCommand('copy');
-        document.body.removeChild(elementoTemp);
-    }
-
-    function mostrarAlerta() {
-        alert("URL copiada al portapapeles");
-    }
-
 }
 
-
-const carritoLista = document.querySelector('#carrito-lista');
-const carritoTotal = document.querySelector('#carrito-total');
-let productosSeleccionados = [];
-
-function agregarAlCarrito(producto) {
-    carrito.push(producto);
-    actualizarCarrito();
-}
-
-function mostrarCarrito() {
-    carritoLista.innerHTML = '';
-    productosSeleccionados.forEach((producto, index) => {
-        const li = document.createElement('li');
-        li.textContent = `${producto.nombre} `;
-        const botonQuitar = document.createElement('button');
-        botonQuitar.innerText = 'Quitar';
-        botonQuitar.onclick = function () {
-            quitarDelCarrito(index);
-            mostrarCarrito();
-        };
-        li.appendChild(botonQuitar);
-        carritoLista.appendChild(li);
-    });
-}
-
-function quitarDelCarrito(index) {
-    productosSeleccionados.splice(index, 1);
-}
-
-const btnWhatsapp = document.getElementById('btn-whatsapp');
-
-btnWhatsapp.addEventListener('click', () => {
-    let mensaje = 'Lista para consultar stock:\n';
-    productosSeleccionados.forEach((producto) => {
-        mensaje += `${producto.nombre}\n`;
-    });
-    
-
-    const telefono = '3765188420'; // Ingresa aquí el número de teléfono de destino
-    const url = `https://api.whatsapp.com/send?phone=${telefono}&text=${encodeURIComponent(mensaje)}`;
-    window.open(url);
-});
-
-categoriaFiltro.addEventListener("change", mostrarProductos);
-precioFiltro.addEventListener("input", mostrarProductos);
-
-mostrarProductos();
+// Mostrar todas las construcciones al cargar la página
+mostrarConstrucciones();
