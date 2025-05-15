@@ -69,6 +69,19 @@ Elegí el encanto natural, la propuesta de vivir a 20' de la ciudad, rodeado de 
     },
 
     {
+        nombre: "Vivienda con local comercial sobre avenida",
+        localizacion: "Garupá",
+        categoria: "Casas",
+        precio: 70000,
+        imagenes: [
+            "img/casa garupa1.jpg",
+            "img/casa garupa2.jpg",
+            "img/casa garupa3.jpg"
+        ],
+        descripcion: `Ubicada sobre Av. las Américas entre Francisco Taita de Haro y Floriano Mandove Pedrozo, a 200 metros de la escuela N° 828. La misma cuenta con tres dormitorios, dos baños, sala de estar, cocina/ quincho grande con parrilla. También cuenta con una piscina de 7x3 mts., lavadero, garage totalmente cerrado con capacidad para dos autos,local comercial con depósito y cartel comercial (el mismo tiene techo de losa y apto para edificar arriba).`
+    },
+
+    {
         nombre: "Casa Quinta en Santa Inés",
         localizacion: "Garupá",
         categoria: "Casas",
